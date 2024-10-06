@@ -15,7 +15,6 @@ public class App {
 
             if (input.equals(rightName)) {
                 System.out.println("Congrats! You guessed right!");
-                i--;
                 break;
             }
             if (input.equals("stop")) {
@@ -23,6 +22,8 @@ public class App {
                 break;
             }
         } while (input != rightName);
+
+        System.out.println("You guessed " + i + " times.");
 
     }
 }
