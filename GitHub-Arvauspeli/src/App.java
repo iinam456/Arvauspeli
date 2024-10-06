@@ -6,13 +6,23 @@ public class App {
         Scanner in = new Scanner(System.in);
         String input;
         String rightName = "Sara";
+        int i = 0;
 
-        System.out.println("Guess my name!");
-        input = in.nextLine();
+        do {
+            System.out.println("Guess my name! (Write stop if you want to stop)");
+            input = in.nextLine();
+            i++;
 
-        if (input.equals("Sara")) {
-            System.out.println("You guessed right!");
-        }
+            if (input.equals(rightName)) {
+                System.out.println("Congrats! You guessed right!");
+                i--;
+                break;
+            }
+            if (input.equals("stop")) {
+                i--;
+                break;
+            }
+        } while (input != rightName);
 
     }
 }
